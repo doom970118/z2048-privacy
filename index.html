@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Política de privacidad de Z-2048, el juego de puzles de inmersoft.">
+  <meta name="theme-color" content="#071426">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://doom970118.github.io/z-2048/privacy-policy/">
+  <title>Política de privacidad | Z-2048</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #050b16;
+      --surface: rgba(11, 28, 50, 0.86);
+      --surface-strong: #0d223c;
+      --border: rgba(111, 217, 255, 0.25);
+      --primary: #6fd9ff;
+      --accent: #b7ff7a;
+      --text: #f3f8ff;
+      --muted: #aec0d5;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 5%, rgba(32, 146, 214, 0.22), transparent 34rem),
+        radial-gradient(circle at 90% 40%, rgba(128, 255, 149, 0.10), transparent 28rem),
+        var(--background);
+      line-height: 1.65;
+    }
+
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      opacity: 0.18;
+      background-image:
+        linear-gradient(rgba(111, 217, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(111, 217, 255, 0.08) 1px, transparent 1px);
+      background-size: 36px 36px;
+      mask-image: linear-gradient(to bottom, black, transparent 75%);
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 7vw, 56px);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: linear-gradient(140deg, rgba(13, 40, 69, 0.96), rgba(7, 20, 38, 0.92));
+      box-shadow: var(--shadow);
+    }
+
+    header::after {
+      position: absolute;
+      top: -80px;
+      right: -60px;
+      width: 230px;
+      height: 230px;
+      border: 34px solid rgba(111, 217, 255, 0.09);
+      border-radius: 52px;
+      content: "";
+      transform: rotate(18deg);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 18px;
+      padding: 7px 12px;
+      border: 1px solid rgba(183, 255, 122, 0.3);
+      border-radius: 999px;
+      color: var(--accent);
+      background: rgba(183, 255, 122, 0.07);
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 14px currentColor;
+      content: "";
+    }
+
+    h1,
+    h2 {
+      line-height: 1.15;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(2.2rem, 8vw, 4.7rem);
+      letter-spacing: -0.055em;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-size: clamp(1.18rem, 3vw, 1.45rem);
+    }
+
+    p,
+    ul {
+      margin: 0;
+    }
+
+    p + p,
+    p + ul,
+    ul + p {
+      margin-top: 14px;
+    }
+
+    ul {
+      padding-left: 1.3rem;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .summary {
+      max-width: 670px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.4vw, 1.14rem);
+    }
+
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 26px;
+    }
+
+    .metadata span {
+      padding: 7px 11px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 9px;
+      color: #d9e8f8;
+      background: rgba(255, 255, 255, 0.045);
+      font-size: 0.84rem;
+    }
+
+    .notice {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      margin: 22px 0;
+      padding: 20px 22px;
+      border: 1px solid rgba(183, 255, 122, 0.28);
+      border-radius: 18px;
+      color: #dcffc1;
+      background: rgba(86, 148, 58, 0.1);
+    }
+
+    .notice strong {
+      font-size: 1.2rem;
+    }
+
+    .sections {
+      display: grid;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    section {
+      padding: clamp(22px, 5vw, 32px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+      box-shadow: 0 12px 38px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
+    a {
+      color: var(--primary);
+      overflow-wrap: anywhere;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--accent);
+    }
+
+    code {
+      padding: 0.18em 0.42em;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      color: #d8f5ff;
+      background: #081728;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 0.9em;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 28px 6px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 560px) {
+      main {
+        width: min(100% - 20px, 920px);
+        padding: 20px 0 42px;
+      }
+
+      header,
+      section {
+        border-radius: 18px;
+      }
+
+      header::after {
+        opacity: 0.5;
+      }
+
+      h1 {
+        font-size: 2rem;
+        letter-spacing: -0.045em;
+      }
+
+      .notice {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Z-2048 · inmersoft</p>
+      <h1>Política de privacidad</h1>
+      <p class="summary">
+        Z-2048 guarda el progreso en el dispositivo y puede ofrecer publicidad
+        mediante Google AdMob y compras procesadas por Google Play.
+      </p>
+      <div class="metadata" aria-label="Información de la política">
+        <span>Aplicación: Z-2048</span>
+        <span>Paquete: com.inmersoft.z2048</span>
+        <span>Actualizada: 7 de octubre de 2026</span>
+      </div>
+    </header>
+
+    <div class="notice" role="note">
+      <strong aria-hidden="true">✓</strong>
+      <p>
+        <strong>Resumen:</strong> inmersoft no vende datos personales. La modalidad
+        gratuita puede mostrar anuncios de Google; las compras permiten obtener
+        cosméticos y activar el modo premium sin anuncios. Los datos de la partida
+        permanecen en el dispositivo.
+      </p>
+    </div>
+
+    <div class="sections">
+      <section aria-labelledby="responsable">
+        <h2 id="responsable">1. Responsable y alcance</h2>
+        <p>
+          Esta política describe el tratamiento de datos en <strong>Z-2048</strong>,
+          aplicación publicada por <strong>inmersoft</strong> e identificada en Android
+          mediante el paquete <code>com.inmersoft.z2048</code>. Ciertas funciones de
+          monetización pueden no estar disponibles en todas las versiones o regiones;
+          cuando una función no está activa, el tratamiento asociado a ella no se
+          produce.
+        </p>
+      </section>
+
+      <section aria-labelledby="datos">
+        <h2 id="datos">2. Datos guardados por Z-2048</h2>
+        <p>
+          Z-2048 no solicita nombre, dirección de correo electrónico, número de
+          teléfono, ubicación, contactos, fotografías, archivos personales,
+          credenciales ni datos de una tarjeta bancaria.
+        </p>
+        <p>Para ofrecer sus funciones, la aplicación guarda localmente:</p>
+        <ul>
+          <li>el estado de la partida en curso y sus movimientos;</li>
+          <li>la mejor puntuación alcanzada;</li>
+          <li>el idioma y las preferencias elegidas;</li>
+          <li>los cosméticos y beneficios habilitados; y</li>
+          <li>ajustes técnicos necesarios para continuar la partida.</li>
+        </ul>
+        <p>
+          La partida, el récord y las preferencias no identifican personalmente al
+          usuario y no se envían a servidores propios de inmersoft.
+        </p>
+      </section>
+
+      <section aria-labelledby="publicidad">
+        <h2 id="publicidad">3. Publicidad mediante Google AdMob</h2>
+        <p>
+          La modalidad gratuita puede utilizar el SDK de Google Mobile Ads (AdMob)
+          para solicitar y mostrar anuncios. Al hacerlo, Google puede recopilar y
+          compartir datos como:
+        </p>
+        <ul>
+          <li>dirección IP y ubicación general aproximada derivada de ella;</li>
+          <li>identificadores del dispositivo o de publicidad, cuando estén disponibles;</li>
+          <li>interacciones con la aplicación y los anuncios, como impresiones, clics y reproducciones; y</li>
+          <li>información de diagnóstico, rendimiento y prevención de fraude.</li>
+        </ul>
+        <p>
+          Google usa esta información para entregar anuncios, limitar su frecuencia,
+          medir resultados, generar informes, mantener la seguridad, detectar tráfico
+          no válido y, cuando exista una base legal y el usuario lo autorice,
+          personalizar la publicidad.
+        </p>
+        <p>
+          Los anuncios no personalizados no se basan en el comportamiento anterior,
+          pero todavía pueden utilizar la dirección IP, almacenamiento local o
+          identificadores para funciones como entrega, frecuencia, medición agregada,
+          seguridad y prevención de fraude. También pueden mostrarse anuncios
+          limitados cuando corresponda.
+        </p>
+      </section>
+
+      <section aria-labelledby="consentimiento">
+        <h2 id="consentimiento">4. Consentimiento y modo premium</h2>
+        <p>
+          Donde sea obligatorio, Z-2048 utilizará una plataforma de gestión del
+          consentimiento certificada por Google antes de solicitar anuncios. El
+          usuario podrá aceptar o rechazar las finalidades disponibles y volver a
+          abrir las opciones de privacidad desde la aplicación. Si no autoriza la
+          personalización, se solicitarán anuncios no personalizados o limitados,
+          según las opciones permitidas en su región.
+        </p>
+        <p>
+          Mientras el modo premium esté activo, Z-2048 no solicitará ni mostrará
+          anuncios de AdMob. El SDK puede continuar incluido en el paquete de la
+          aplicación, pero no se iniciarán solicitudes publicitarias para ese usuario.
+          La compra de cosméticos por sí sola no elimina los anuncios.
+        </p>
+      </section>
+
+      <section aria-labelledby="compras">
+        <h2 id="compras">5. Cosméticos, compras y Google Play Billing</h2>
+        <p>
+          Z-2048 puede ofrecer compras de cosméticos y una mejora premium mediante
+          el sistema de facturación de Google Play. Google procesa el pago y la
+          información financiera conforme a sus propias condiciones. inmersoft no
+          recibe el número de tarjeta ni las credenciales de pago del usuario.
+        </p>
+        <p>
+          Para completar, verificar y restaurar una compra, la aplicación y Google
+          Play pueden tratar el identificador del producto, el estado y fecha de la
+          operación, el recibo o token de compra y el derecho adquirido. Estos datos
+          se utilizan para entregar el cosmético, restaurar compras, mantener el modo
+          premium y prevenir fraude. Las compras vinculadas a la cuenta de Google
+          pueden mantenerse en Google Play aunque se desinstale la aplicación.
+        </p>
+      </section>
+
+      <section aria-labelledby="terceros">
+        <h2 id="terceros">6. Terceros y divulgación de datos</h2>
+        <p>
+          inmersoft no vende ni alquila datos personales. Los proveedores que pueden
+          recibir o tratar información para prestar las funciones descritas son:
+        </p>
+        <ul>
+          <li>
+            <strong>Google AdMob y sus proveedores de tecnología publicitaria</strong>,
+            para entrega, personalización autorizada, medición, seguridad y prevención
+            de fraude. Los proveedores aplicables se muestran en el mensaje de
+            consentimiento de la aplicación.
+          </li>
+          <li>
+            <strong>Google Play y Google Play Billing</strong>, para distribución,
+            procesamiento y restauración de compras, seguridad y diagnóstico.
+          </li>
+        </ul>
+        <p>
+          Puedes consultar la
+          <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Política de Privacidad de Google</a>
+          y la explicación sobre
+          <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">cómo utiliza Google la información de aplicaciones asociadas</a>.
+          El juego utiliza Unity como motor, pero no emplea Unity Ads ni Unity
+          Analytics para esta monetización.
+        </p>
+      </section>
+
+      <section aria-labelledby="eliminacion">
+        <h2 id="eliminacion">7. Conservación, control y eliminación</h2>
+        <p>
+          Los datos locales se conservan hasta que se sobrescriben o eliminan. El
+          usuario puede reemplazar la partida guardada iniciando una nueva. Para
+          eliminar la partida, el récord, las preferencias y demás datos locales,
+          puede usar
+          <strong>Ajustes de Android → Aplicaciones → Z-2048 → Almacenamiento → Borrar datos</strong>
+          o desinstalar la aplicación.
+        </p>
+        <p>
+          Z-2048 no crea una cuenta propia. Las compras y los datos publicitarios
+          tratados por Google están sujetos a los controles, plazos de conservación
+          y opciones de eliminación de Google. Borrar los datos locales no cancela
+          una compra ni elimina el historial de transacciones conservado legalmente
+          por Google Play.
+        </p>
+      </section>
+
+      <section aria-labelledby="permisos">
+        <h2 id="permisos">8. Permisos y seguridad</h2>
+        <p>
+          La aplicación utiliza acceso a Internet para cargar anuncios, gestionar el
+          consentimiento y comunicarse con Google Play durante las compras. No
+          solicita permisos sensibles como ubicación precisa, cámara, micrófono,
+          contactos o acceso general a archivos personales. La información de la
+          partida se mantiene en el almacenamiento privado de la aplicación y las
+          comunicaciones de los servicios de Google se realizan mediante conexiones
+          seguras proporcionadas por sus SDK.
+        </p>
+      </section>
+
+      <section aria-labelledby="menores">
+        <h2 id="menores">9. Privacidad de menores</h2>
+        <p>
+          Z-2048 no ofrece cuentas, chat ni campos para introducir información
+          personal. inmersoft no utilizará publicidad personalizada para usuarios
+          que se sepa que son menores de la edad aplicable. Cuando la aplicación se
+          ofrezca a menores, las solicitudes publicitarias se configurarán con el
+          tratamiento apropiado para niños y se limitará la personalización conforme
+          a las políticas de Google Play, AdMob y la legislación correspondiente.
+        </p>
+      </section>
+
+      <section aria-labelledby="cambios">
+        <h2 id="cambios">10. Cambios en esta política</h2>
+        <p>
+          Esta política se actualizará cuando cambien las funciones, los proveedores
+          o el tratamiento de datos de Z-2048. La fecha de la versión vigente
+          aparecerá al inicio de esta página.
+        </p>
+      </section>
+
+      <section aria-labelledby="contacto">
+        <h2 id="contacto">11. Contacto</h2>
+        <p>
+          Para consultas sobre privacidad, escribe a
+          <a href="mailto:doom97.demo@gmail.com">doom97.demo@gmail.com</a>.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      © 2026 inmersoft · Política específica de Z-2048
+    </footer>
+  </main>
+</body>
+</html>
